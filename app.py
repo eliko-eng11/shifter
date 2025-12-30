@@ -2,6 +2,9 @@ import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
 from gspread.exceptions import APIError
+import streamlit as st
+st.write("APP VERSION:", "2025-12-30 20:30")  # תשנה כל פעם
+
 
 SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -67,3 +70,4 @@ if st.button("בדוק עכשיו"):
     except Exception as e:
         st.error("❌ שגיאה כללית")
         st.exception(e)
+
